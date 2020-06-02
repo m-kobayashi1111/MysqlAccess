@@ -20,7 +20,10 @@ public class Customer {
 	
 	@Column(name="ADDRESS" ,columnDefinition = "VARCHAR(256)")
 	private String address;
-
+	
+	@Column(name="TEL",columnDefinition = "VARCHAR(11)") //カラムの定義、文字数11文字
+	private String tel;
+	
 	@Column(name="UPDATE_DATE" ,columnDefinition = "datetime")
 	private Timestamp update_date;
 
@@ -51,15 +54,23 @@ public class Customer {
 	public void setAddress(String address) {
 		this.address = address;
 	}	
+	public String getTel() { //privateに隠蔽されたフィールドの値を外部から取得するためのメソッド
+		return tel;
+	}
+	public void setTel(String tel) { //privateに隠蔽されたフィールドの値を外部から変更するためのメソッド
+		this.tel = tel;
+	}
 
 	
 	public void setAll(  String c_num
 						,String c_name
 						,String address
+						,String tel
 						) {
 		this.c_num = c_num;
 		this.c_name = c_name;
 		this.address = address;
+		this.tel = tel;
 		
 	}
 	
