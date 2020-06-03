@@ -8,10 +8,16 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+//業務データを保持するためのクラスを作成する(Entityクラス)
 @Entity
+
 @Table(name="M_EMPLOYEE")
 public class Employee {
+	
+	//主キー（PRIMARY KEY）
 	@Id
+	
+	//フィールドに対応するカラムを指定する
 	@Column(name="E_NUM" ,columnDefinition = "VARCHAR(5)")
 	private String e_num;
 	

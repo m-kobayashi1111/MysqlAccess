@@ -20,7 +20,9 @@
 					<th>TEL</th>
 				</tr>
 			</thead>
-				<tr th:each="customer : ${customerlist}" th:object="${customer}"> <!-- thymeleafの拡張for文  -->
+				<!-- thymeleafの拡張for文  -->
+				<!-- th:eath="変数 : ${コレクション}" th:object="{変数}" -->
+				<tr th:each="customer : ${customerlist}" th:object="${customer}"> 
 					<td id="td_num" th:text="*{c_num}"></td>		
 					<td id="td_name" th:text="*{c_name}"></td>		
 					<td id="td_address" th:text="*{address}"></td>

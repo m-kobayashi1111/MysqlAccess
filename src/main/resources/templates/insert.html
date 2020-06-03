@@ -11,6 +11,8 @@
 <body>
 	<h1>DB登録（顧客名簿:CUSTOMER）</h1>
 	<div id="access">
+		<!-- method属性は送信方法を指定する、postは本文として送信される -->
+		<!-- action属性は、送信先URLを指定する際に使用する -->
 		<form method="post" action="register">
 			<span class="colorr-red">顧客コード（半角数字で入力）</span><input type="text" name="c_num" maxlength="4" required="required" oninput="value = value.replace(/[^0-9]+/i,'');">
 			<span class="colorr-red">顧客名</span><input type="text" name="c_name" required="required">
@@ -18,6 +20,7 @@
 			<span>TEL（半角数字で入力）</span><input type="text" name="tel" maxlength="11" oninput="value = value.replace(/[^0-9]+/i,'');">
 			
 			<div id="insert">
+				<!-- アウトラインボタンを表示（bootstrap） -->
 				<input type="submit" class="btn btn-outline-success" value="登録">
 			</div>
 				

@@ -12,10 +12,10 @@
 	<h1>DB登録（社員名簿:EMPLOYEE）</h1>
 	<div id="access">
 		<form method="post" action="registerEmployee">
-			<span class="colorr-red">社員No</span><input type="text" name="e_num" maxlength="5" required="required" oninput="value = value.replace(/[^0-9]+/i,'');">
+			<span class="colorr-red">社員No（半角数字で入力）</span><input type="text" name="e_num" maxlength="5" required="required" oninput="value = value.replace(/[^0-9]+/i,'');">
 			<span class="colorr-red">氏名</span><input type="text" name="e_name" required="required">
-			<span class="colorr-red">入社年</span><input type="text" name="e_year" maxlength="11" required="required" oninput="value = value.replace(/[^0-9]+/i,'');">
-			<span>所属部署</span><input type="text" name="depart_cd" maxlength="11" oninput="value = value.replace(/[^0-9]+/i,'');">
+			<span class="colorr-red">入社年（半角数字で入力）</span><input type="text" name="e_year" maxlength="11" required="required" oninput="value = value.replace(/[^0-9]+/i,'');">
+			<span>所属部署（半角数字で入力）</span><input type="text" name="depart_cd" maxlength="11" oninput="value = value.replace(/[^0-9]+/i,'');">
 			
 			<div id="insert">
 				<input type="submit" class="btn btn-outline-success" value="登録">

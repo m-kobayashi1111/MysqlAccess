@@ -8,7 +8,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+//業務データを保持するためのクラスを作成する(Entityクラス)
 @Entity
+
 @Table(name="M_DEPARTMENT")
 public class Department {
 	@Id
